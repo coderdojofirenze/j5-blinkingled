@@ -1,0 +1,22 @@
+{
+  "name": "j5-blinkingled",
+  "version": "1.0.0",
+  "description": "A simple demo circuit made and programmed using Arduino, Nodejs and Johnny-Five",
+  "main": "blink.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderdojofirenze/j5-blinkingled.git"
+  },
+  "author": "Coderdojo Firenze <firenze@coderdojo.it>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coderdojofirenze/j5-blinkingled/issues"
+  },
+  "homepage": "https://github.com/coderdojofirenze/j5-blinkingled#readme",
+  "dependencies": {
+    "johnny-five": "^1.0.0"
+  }
+}
