@@ -145,7 +145,7 @@ void loop() {
 }
 ```
 
-Tutto molto più semplice, no? Inoltre il programma rimane in esecuzione sulla scheda anche quando la stacchiamo dal PC. Infatti questo codice è stato _compilato_ e quindi scaricato fisicamente sulla EEPROM della scheda. Tutte le volte che la alimenteremo il codice inesorabilmente andrà il esecuzione senza bisogno di alcun supporto dall'esterno.
+Tutto molto più semplice, no? Inoltre il programma rimane in esecuzione sulla scheda anche quando la stacchiamo dal PC. Infatti questo codice è stato _compilato_ e quindi scaricato fisicamente sulla EEPROM della scheda. Tutte le volte che la alimenteremo il codice inesorabilmente andrà in esecuzione senza bisogno di alcun supporto dall'esterno.
 
 Invece il codice NodeJS che abbiamo realizzato in precedenza, viene eseguito sul PC collegato alla scheda e i "comandi" come l'accensione del LED vengono inviati in tempo reale tramite il dialogo tra la libreria Johnny-Five sul PC e il firmware Firmata installato sulla scheda.
 
