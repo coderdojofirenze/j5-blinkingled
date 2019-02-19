@@ -8,7 +8,7 @@ Se siete in possesso di una copia di questo tutorial avete probabilmente già vi
 
 Nel realizzare quanto descritto in questo tutorial potete utilizzare come base di partenza questo repository o, ancora meglio, partire da zero e realizzare tutto per conto vostro. Questo tutorial fa riferimento al secondo caso, tutto viene spiegato nel dettaglio in modo che possiate realizzare il tutto senza dover utilizzare git in nessun modo.
 
-## Setup iniziale
+## Installazione software
 
 Questo tutorial è stato provato con la scheda **Arduino Uno**, per cui nel resto della descrizione si farà riferimento ad una scheda di questo tipo, anche se è naturalmente possibile che il tutto funzioni anche con altre tipologie di schede.
 
@@ -22,7 +22,7 @@ Alla fine dell'installazione per verificare che NodeJS sia stato installato corr
 
 ![Node -v e npm -v](assets/node_installation_ok.bmp)
 
-### Inizializzazione progetto NodeJS
+## Inizializzazione progetto NodeJS
 
 A questo punto occorre inizializzare un nuovo progetto NodeJS. Il modo più semplice per farlo consiste nell'utilizzare il comando `npm init` dalla command line. Per fare questo utilizziamo il terminale che abbiamo aperto in precedenza, creiamo una directory dove mettere il nostro progetto, entriamoci e diamo il comando suddetto. In tutto dare i seguenti comandi:
 
@@ -85,7 +85,7 @@ Per ottenere un primo risultato e capire come funziona Johnny-Five scriviamo un 
 ```javascript
 // Un LED Lampeggiante
 
-// Carichaimo la libreria 'johnny-five'
+// Carichiamo la libreria 'johnny-five'
 var five = require('johnny-five');
 
 // Dichiariamo una scheda di tipo Arduino
@@ -123,9 +123,9 @@ Adesso eseguiamo nuovamente il programma tramite il comando `node blink.js`. Ade
 
 La resistenza, un componente fondamentale dei circuiti elettronici si misura in Ohm (Ω), dal nome dello scienziato tedesco [Georg Simon Alfred Ohm](https://it.wikipedia.org/wiki/Georg_Ohm) lo scopritore della famosa [legge di Ohm](https://it.wikipedia.org/wiki/Legge_di_Ohm) che esprime la legge di proporzionalità tra differenza di potenziale e corrente.
 
-Quando si costruisce un circuito elettrico, le resistenze si riconoscono facilmente: sono dei piccoli cilindrini di materiale che sembra plastica dal quale sbucano dei fili metallici che poi sono quelli che si collegano al circuito. Il valore di resistenza viene indicato tramite delle strisce colorate presenti sul corpo della resistenza. Ogni colore rappresenta un numero. Anche se possono esistere versioni diverse, le resistenze più comuni sono quelle con il codice a quattro strisce. Le prime tre strisce rappresentano il valore in ohm e la quarta la tolleranza.
+Quando si costruisce un circuito elettrico, le resistenze si riconoscono facilmente: sono dei piccoli cilindrini di materiale che sembra plastica molto dura dal quale sbucano dei fili metallici che poi sono quelli che servono per collegare la resistenza al circuito. Il valore di resistenza viene indicato tramite delle strisce colorate presenti sul corpo della resistenza. Ogni colore rappresenta un numero. Anche se possono esistere versioni diverse, le resistenze più comuni sono quelle con il codice a quattro strisce. Le prime tre strisce rappresentano il valore in ohm e la quarta la tolleranza.
 
-Delle tre strisce che indicano il valore le prime due sono le prime due cifre del numero e la terza il moltiplicatore. Fare riferimento alla seguente tabella per capire come calcolare il valore.
+Delle tre strisce che indicano il valore le prime due sono le prime due cifre del numero e la terza il moltiplicatore. Fare riferimento alla seguente immagine per capire come calcolare il valore.
 
 ![Tabella per il calcolo dei valori delle resistenze](assets/codice_colori_resistenze.gif)
 
