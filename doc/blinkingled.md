@@ -119,9 +119,21 @@ Il circuito è molto semplice. L'unico particolare a cui fare attenzione è la p
 
 Adesso eseguiamo nuovamente il programma tramite il comando `node blink.js`. Adesso oltre al led sulla scheda lampeggerà anche il led che abbiamo montato noi.
 
-## Appendice: Codice Nativo "Arduino" vs. Johnny-Five
+## Appendice 1: Il codice dei colori delle resistenze
 
-Abbiamo visto che per ottenere il semplice risultato di far lampeggiare un led abbiamo dovuto scomodare una quantità ingente di codice. Solo in termini di moduli NodeJS (tra cui Johnny-Five) abbiamo dovuto scaricare quasi 10 Mbytes di codice! Per non parlare del complesso firmware Firmata che abbiamo dovuto installare su Arduino.
+La resistenza, un componente fondamentale dei circuiti elettronici si misura in Ohm (Ω), dal nome dello scienziato tedesco [Georg Simon Alfred Ohm](https://it.wikipedia.org/wiki/Georg_Ohm) lo scopritore della famosa [legge di Ohm](https://it.wikipedia.org/wiki/Legge_di_Ohm) che esprime la legge di proporzionalità tra differenza di potenziale e corrente.
+
+Quando si costruisce un circuito elettrico, le resistenze si riconoscono facilmente: sono dei piccoli cilindrini di materiale che sembra plastica dal quale sbucano dei fili metallici che poi sono quelli che si collegano al circuito. Il valore di resistenza viene indicato tramite delle strisce colorate presenti sul corpo della resistenza. Ogni colore rappresenta un numero. Anche se possono esistere versioni diverse, le resistenze più comuni sono quelle con il codice a quattro strisce. Le prime tre strisce rappresentano il valore in ohm e la quarta la tolleranza.
+
+Delle tre strisce che indicano il valore le prime due sono le prime due cifre del numero e la terza il moltiplicatore. Fare riferimento alla seguente tabella per capire come calcolare il valore.
+
+![Tabella per il calcolo dei valori delle resistenze](assets/codice_colori_resistenze.gif)
+
+Per esempio per capire i colori presenti su una resistenza con il valore di 220 Ω bisogna pensare che 220 = 22 x 10, quindi su queste resistenze ci saranno due strisce rosse (che corrispondono al 2) e una striscia marrone (che corrisponde al moltiplicatore 10).
+
+## Appendice 2: Codice Nativo "Arduino" vs. Johnny-Five
+
+Torniamo al nostro circuito. Abbiamo visto che per ottenere il semplice risultato di far lampeggiare un led abbiamo dovuto scomodare una quantità ingente di codice. Solo in termini di moduli NodeJS (tra cui Johnny-Five) abbiamo dovuto scaricare quasi 10 Mbytes di codice! Per non parlare del complesso firmware Firmata che abbiamo dovuto installare su Arduino.
 
 Inoltre per far girare il programma dobbiamo tenere  costantemente collegato alla scheda Arduino un PC con in esecuzione `node`. Come stacchiamo il PC o fermiamo NodeJS, il programma smette di funzionare.
 
