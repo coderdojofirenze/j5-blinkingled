@@ -12,7 +12,7 @@ Nel realizzare quanto descritto in questo tutorial potete utilizzare come base d
 
 Questo tutorial è stato provato con la scheda **Arduino Uno**, per cui nel resto della descrizione si farà riferimento ad una scheda di questo tipo, anche se è naturalmente possibile che il tutto funzioni anche con altre tipologie di schede.
 
-E' necessario installare sul vostro PC:
+È necessario installare sul vostro PC:
 - [La IDE di Arduino](https://www.arduino.cc/en/main/software)
 - [NodeJS](https://nodejs.org/it/)
 
@@ -32,11 +32,11 @@ cd j5-blinkingled
 npm init
 ```
 
-Rispondere alle domande che appaiono sul terminale. In molti casi si può premere invio accettando la risposta proposta, in alcuni casi può essere utile scrivere qualcosa di diverso. Per esempio alla domanda `description:` si può rispondere **_"Un led lampeggiante con Arduino, NodeJS e Johnny-five"_**  e alla domanda `author:` si può rispondere con il proprio nome (e volendo con il proprio indirizzo email).
+Rispondere alle domande che appaiono sul terminale. In molti casi si può premere invio accettando la risposta proposta, in alcuni casi può essere utile scrivere qualcosa di diverso. Per esempio alla domanda `description:` si può rispondere **_"Un led lampeggiante con Arduino, NodeJS e Johnny-five"_** e alla domanda `author:` si può rispondere con il proprio nome (e volendo con il proprio indirizzo email).
 
 **Importante:** Alla domanda `entry point:` si deve rispondere con **_"blink.js"_**.
 
-Alla fine, sul terminale dovrebbe apparire qualcosa di simile a quanto raffigurato nell'immadgine che segue.
+Alla fine, sul terminale dovrebbe apparire qualcosa di simile a quanto raffigurato nell'immagine che segue.
 
 ![npm init](assets/npm_init.bmp)
 
@@ -91,7 +91,7 @@ var five = require('johnny-five');
 // Dichiariamo una scheda di tipo Arduino
 var board = new five.Board();
 
-// Dichiariamo una funzione che fa lampeggiare un led
+// Dichiariamo una funzione che fa lampeggiare un LED
 // per sempre con un periodo di mezzo secondo.
 board.on('ready', function() {
   var led = new five.Led(13);
@@ -105,7 +105,7 @@ Per mandare in esecuzione il programma, dal terminale dare il seguente comando:
 node blink.js
 ```
 
-Dopo una fase iniziale di setup si può notare come il piccolo led vicino al connettore laterale più lungo della scheda Arduino (quello con accanto l'etichetta "L"), comincia a lampeggiare. Il nostro primo codice Javascript è adesso in esecuzione su una scheda a microcontrollore!
+Dopo una fase iniziale di setup si può notare come il piccolo led vicino al connettore laterale più lungo della scheda Arduino (quello con accanto l'etichetta "L"), comincia a lampeggiare. Il nostro primo codice JavaScript è adesso in esecuzione su una scheda a microcontrollore!
 
 Per interrompere l'esecuzione del programma digitare i tasti "Ctrl-C" due volte.
 
@@ -113,11 +113,11 @@ Per interrompere l'esecuzione del programma digitare i tasti "Ctrl-C" due volte.
 
 Per rendere più interessante il nostro esercizio possiamo realizzare un piccolo circuito collegando un "vero" led alla scheda. Realizziamo quindi il seguente circuito:
 
-![Un led colledato alla scheda Arduino](assets/arduino_single_led.bmp)
+![Un led collegato alla scheda Arduino](assets/arduino_single_led.bmp)
 
-Il circuito è molto semplice. L'unico particolare a cui fare attenzione è la polarità del diodo LED. Il led infatti si accederà solo se è collegato nel giusto verso. In particolare l'**anodo** (riconoscibile perché è il pin più lungo) va collegato dal lato del pin 13 (opposto alla massa indicata come "GND" ossia ground). L'altro pin del LED si chiama **catodo**, va collegato verso la massa ed è riconoscibile anche per un piccolo taglio che c'è sul corpo del LED.
+Il circuito è molto semplice. L'unico particolare a cui fare attenzione è la polarità del diodo LED. Il LED infatti si accederà solo se è collegato nel giusto verso. In particolare l'**anodo** (riconoscibile perché è il pin più lungo) va collegato dal lato del pin 13 (opposto alla massa indicata come "GND" ossia ground). L'altro pin del LED si chiama **catodo**, va collegato verso la massa ed è riconoscibile anche per un piccolo taglio che c'è sul corpo del LED.
 
-Adesso eseguiamo nuovamente il programma tramite il comando `node blink.js`. Adesso oltre al led sulla scheda lampeggerà anche il led che abbiamo montato noi.
+Adesso eseguiamo nuovamente il programma tramite il comando `node blink.js`. Adesso oltre al LED sulla scheda lampeggerà anche il LED che abbiamo montato noi.
 
 ## Appendice 1: Il codice dei colori delle resistenze
 
@@ -133,9 +133,9 @@ Per esempio per capire i colori presenti su una resistenza con il valore di 220 
 
 ## Appendice 2: Codice Nativo "Arduino" vs. Johnny-Five
 
-Torniamo al nostro circuito. Abbiamo visto che per ottenere il semplice risultato di far lampeggiare un led abbiamo dovuto scomodare una quantità ingente di codice. Solo in termini di moduli NodeJS (tra cui Johnny-Five) abbiamo dovuto scaricare quasi 10 Mbytes di codice! Per non parlare del complesso firmware Firmata che abbiamo dovuto installare su Arduino.
+Torniamo al nostro circuito. Abbiamo visto che per ottenere il semplice risultato di far lampeggiare un LED abbiamo dovuto scomodare una quantità ingente di codice. Solo in termini di moduli NodeJS (tra cui Johnny-Five) abbiamo dovuto scaricare quasi 10 Mbytes di codice! Per non parlare del complesso firmware Firmata che abbiamo dovuto installare su Arduino.
 
-Inoltre per far girare il programma dobbiamo tenere  costantemente collegato alla scheda Arduino un PC con in esecuzione `node`. Come stacchiamo il PC o fermiamo NodeJS, il programma smette di funzionare.
+Inoltre per far girare il programma dobbiamo tenere costantemente collegato alla scheda Arduino un PC con in esecuzione `node`. Come stacchiamo il PC o fermiamo NodeJS, il programma smette di funzionare.
 
 L'alternativa "classica" per ottenere lo stesso risultato con il codice "nativo" Arduino consiste molto più semplicemente nell'aprire la IDE, digitare il seguente codice e scaricarlo sulla scheda tramite il pulsante "Upload":
 
@@ -143,7 +143,7 @@ L'alternativa "classica" per ottenere lo stesso risultato con il codice "nativo"
 // La funzione setup() viene eseguita una sola volta tutte le volte
 // che si accende la scheda o quando si preme il pulsante Reset
 void setup() {
-  // Inizializza come output la linea digitale dove è collegato il led incorporato.
+  // Inizializza come output la linea digitale dove è collegato il LED incorporato.
   // La costante LED_BUILTIN è equivalente al numero 13
   pinMode(LED_BUILTIN, OUTPUT);
 }
@@ -161,5 +161,5 @@ Tutto molto più semplice, no? Inoltre il programma rimane in esecuzione sulla s
 
 Invece il codice NodeJS che abbiamo realizzato in precedenza, viene eseguito sul PC collegato alla scheda e i "comandi" come l'accensione del LED vengono inviati in tempo reale tramite il dialogo tra la libreria Johnny-Five sul PC e il firmware Firmata installato sulla scheda.
 
-Quale è quindi il vantaggio di utilizzare NodeJS e Johnny-Five rispetto a lavorare direttamente con la IDE di Arduino? Per avere una risposta, basta pensare al mondo a cui ci permette di accedere la programmazione Javascript... Maggiori dettagli nei prossimi tutorial!
+Quale è quindi il vantaggio di utilizzare NodeJS e Johnny-Five rispetto a lavorare direttamente con la IDE di Arduino? Per avere una risposta, basta pensare al mondo a cui ci permette di accedere la programmazione JavaScript... Maggiori dettagli nei prossimi tutorial!
 
