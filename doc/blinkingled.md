@@ -78,6 +78,8 @@ A questo punto dobbiamo installare sulla scheda il firmware "Firmata", necessari
 
 A questo punto la IDE può essere chiusa. Infatti non ci servirà più per tutta la durata del tutorial.
 
+<div class="page"/>
+
 ## Un primo led lampeggiante
 
 Per ottenere un primo risultato e capire come funziona Johnny-Five scriviamo un primo programma che per funzionare non ha bisogno di realizzare nessun circuito. Infatti le schede Arduino dispongono di un led collegato direttamente sulla scheda che si controlla tramite la linea led numero **13**. Scriviamo quindi il seguente codice nel file di nome `blink.js`:
@@ -109,6 +111,8 @@ Dopo una fase iniziale di setup si può notare come il piccolo led vicino al con
 
 Per interrompere l'esecuzione del programma digitare i tasti "Ctrl-C" due volte.
 
+<div class="page"/>
+
 ## Un "vero" circuito
 
 Per rendere più interessante il nostro esercizio possiamo realizzare un piccolo circuito collegando un "vero" led alla scheda. Realizziamo quindi il seguente circuito:
@@ -118,6 +122,8 @@ Per rendere più interessante il nostro esercizio possiamo realizzare un piccolo
 Il circuito è molto semplice. L'unico particolare a cui fare attenzione è la polarità del diodo LED. Il LED infatti si accederà solo se è collegato nel giusto verso. In particolare l'**anodo** (riconoscibile perché è il pin più lungo) va collegato dal lato del pin 13 (opposto alla massa indicata come "GND" ossia ground). L'altro pin del LED si chiama **catodo**, va collegato verso la massa ed è riconoscibile anche per un piccolo taglio che c'è sul corpo del LED.
 
 Adesso eseguiamo nuovamente il programma tramite il comando `node blink.js`. Adesso oltre al LED sulla scheda lampeggerà anche il LED che abbiamo montato noi.
+
+<div class="page"/>
 
 ## Appendice 1: Il codice dei colori delle resistenze
 
@@ -130,6 +136,8 @@ Delle tre strisce che indicano il valore le prime due sono le prime due cifre de
 ![Tabella per il calcolo dei valori delle resistenze](assets/codice_colori_resistenze.gif)
 
 Per esempio per capire i colori presenti su una resistenza con il valore di 220 Ω bisogna pensare che 220 = 22 x 10, quindi su queste resistenze ci saranno due strisce rosse (che corrispondono al 2) e una striscia marrone (che corrisponde al moltiplicatore 10).
+
+<div class="page"/>
 
 ## Appendice 2: Codice Nativo "Arduino" vs. Johnny-Five
 
